@@ -17,3 +17,5 @@ A scheduled task named `SystemTelemetryUpdate` was injected into the host enviro
 $action = New-ScheduledTaskAction -Execute 'powershell.exe' -Argument '-NoProfile -WindowStyle Hidden -Command "Start-Sleep -s 3600"'
 $trigger = New-ScheduledTaskTrigger -AtLogOn
 Register-ScheduledTask -TaskName "SystemTelemetryUpdate" -Action $action -Trigger$trigger -User "SYSTEM"
+
+---
